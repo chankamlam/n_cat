@@ -42,10 +42,10 @@ to it and then reads it until EOF. This complements the UNIX domain binding capa
     // println!("files=>{:?}",files);
 
     for fpath in files{
+        let mut idx = 0;
         match open(fpath){
             Err(err)=> eprintln!("{}=>{}",fpath,err),
             Ok(file)=>{
-                let mut idx = 0;
                 for line in file.lines(){
                     let content = line.unwrap();
                     if arg_number || arg_number_nonblank{
