@@ -2,8 +2,6 @@ use std::process::{Command,Stdio};
 
 use assert_cmd::{Command as ACMD, output::OutputOkExt};
 
-use assert_cmd::prelude::*;
-// use predicates::prelude::*;
 
 #[test]
 fn run_without_number_and_number_nonblank(){
