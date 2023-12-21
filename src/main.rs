@@ -41,8 +41,8 @@ to it and then reads it until EOF. This complements the UNIX domain binding capa
     // println!("number_nonblank=>{}",arg_number_nonblank);
     // println!("files=>{:?}",files);
 
-    let mut idx = 0;
     for fpath in files{
+        let mut idx = 0;
         match open(fpath){
             Err(err)=> eprintln!("{}=>{}",fpath,err),
             Ok(file)=>{
